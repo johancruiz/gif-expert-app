@@ -4,6 +4,7 @@ import { useState } from "react"
 export const AddCategory = ({  addNewCategory }) => {
 
     const [inputValue, setInputValue] = useState()
+    const [inputValue2, setInputValue2] = useState()
 
     const onInputChange = ({ target }) => {
       setInputValue(target.value);
@@ -24,6 +25,12 @@ export const AddCategory = ({  addNewCategory }) => {
     <>
     <form onSubmit={ onSubmit }>
           <input 
+            type="text"
+            placeholder="Search Gifs..."
+            value={inputValue}
+            onChange={  onInputChange }
+          />
+           <input 
             type="text"
             placeholder="Search Gifs..."
             value={inputValue}
